@@ -1,0 +1,16 @@
+doctype 5
+html(ng-app="app")
+  head
+    link(rel='stylesheet', href='/vendor/bootstrap/2.3.2/css/bootstrap.css')
+    link(rel='stylesheet', href='/css/layout.css')
+    link(rel='stylesheet', href='/css/style.css')
+    block head
+  body
+    div#content(ng-controller='PageCtrl')
+      header.navbar.navbar-inverse
+        block header
+      section
+        block body
+      footer.navbar
+        block footer
+    block scripts
