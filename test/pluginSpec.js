@@ -1,7 +1,6 @@
-/*
- * runrightfast-osm-ui-hapi-plugin: test/pluginSpec.js
- * Plugin tests
- *
+/**
+ * runrightfast-osm-ui-hapi-plugin: test/pluginSpec.js Plugin tests
+ * 
  * Copyright [2013] [runrightfast.co]
  * 
  * Licensed under the Apache License, Version 2.0 (the "License"); you may not
@@ -46,13 +45,46 @@ describe('runrightfast-osm-ui-hapi-plugin', function() {
 		});
 	});
 
-	it('response to a GET of /runrightfast/osm/version', function(done) {
+	it('responses to a GET of /runrightfast/osm/version', function(done) {
 		server.inject({
 			method : 'GET',
 			url : '/runrightfast/osm/version'
 		}, function(res) {
 			expect(res.statusCode).to.equal(200);
 			expect(res.payload).to.equal(module.exports.version);
+			done();
+		});
+	});
+
+	it('responds to a GET of /', function(done) {
+		server.inject({
+			method : 'GET',
+			url : '/'
+		}, function(res) {
+			expect(res.statusCode).to.equal(200);
+			expect(res.headers['content-type']).to.equal('text/html; charset=utf-8');
+			done();
+		});
+	});
+
+	it('responds to a GET of /views/nav', function(done) {
+		server.inject({
+			method : 'GET',
+			url : '/views/nav'
+		}, function(res) {
+			expect(res.statusCode).to.equal(200);
+			expect(res.headers['content-type']).to.equal('text/html; charset=utf-8');
+			done();
+		});
+	});
+
+	it('responds to a GET of /css/layout.css', function(done) {
+		server.inject({
+			method : 'GET',
+			url : '/css/layout.css'
+		}, function(res) {
+			expect(res.statusCode).to.equal(200);
+			expect(res.headers['content-type']).to.equal('text/css');
 			done();
 		});
 	});
