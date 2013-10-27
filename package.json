@@ -24,6 +24,7 @@
 	"dependencies":{
 		"config":"0.4.x",
 		"handlebars": "1.0.12",
+		"hoek": "1.1.x",
 		"i18next": "~1.6.x",
 		"jade": "~0.35.x",
 		"lodash":"2.2.x",

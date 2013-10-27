@@ -1,5 +1,5 @@
 /**
- * runrightfast-osm-ui-hapi-plugin: lib/hapi-plugin.js
+ * runrightfast-osm-ui-hapi-plugin: index.js
  * 
  * Copyright [2013] [runrightfast.co]
  * 
@@ -16,34 +16,4 @@
  * the License.
  */
 
-'use strict';
-
-// module dependencies
-var Hoek = require('hoek');
-
-// declare plugin internals
-var internals = {
-	defaults : {
-		version : '/runrightfast/osm/version'
-	}
-};
-internals.version = Hoek.loadPackage().version;
-
-// plugin registration
-module.exports.register = function(plugin, options, next) {
-
-	var settings = Hoek.applyToDefaults(internals.defaults, options);
-
-	if (settings.version) {
-		plugin.route({
-			method : 'GET',
-			path : settings.version,
-			handler : function() {
-				this.reply(internals.version);
-			}
-		});
-	}
-
-	next();
-
-};
+module.exports = require('./lib');
