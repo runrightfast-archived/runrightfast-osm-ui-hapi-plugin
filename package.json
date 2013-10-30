@@ -7,7 +7,7 @@
 		"url":"https://github.com/runrightfast/runrightfast-osm-ui-hapi-plugin.git"
 	},
 	"scripts":{
-		"start":"nodemon index.js",
+		"start":"nodemon test-server.js",
 		"blanket":{
 			"pattern":[
 				"lib/logging-server.js"
