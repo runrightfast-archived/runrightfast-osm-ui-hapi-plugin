@@ -16,8 +16,15 @@ block footer
   span.muted.credit #{t('appname')} - v#{version}
   
 block body
-  div.page
-    p TBD
+  div.page.container-liquid
+    div.menu.row
+      div.menubar.col-sm-12
+        p TBD - menu
+    div.content.row
+      div.sidebar.col-sm-3
+        p TBD - sidebar
+      div.workspace.col-sm-9
+        p TBD - workspace
   
 block scripts
   script(type='text/javascript', src='/vendor/angularjs/1.2.0-rc3/js/angular.js')

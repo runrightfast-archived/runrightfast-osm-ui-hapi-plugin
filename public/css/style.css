@@ -16,3 +16,25 @@ body>header a {
 body>header a:hover {
   color: gold !important;
 }
+
+body>section>.page {
+  height: 100%;
+}
+
+body>section>.page .menu .menubar {
+  height: 100%;
+  background-color: red;
+}
+
+body>section>.page .content {
+  height: 100%;
+}
+body>section>.page .sidebar {
+  height: 100%;
+  background-color: yellow;
+}
+
+body>section>.page .workspace {
+  height: 100%;
+  background-color: green;
+}
