@@ -23,10 +23,6 @@
 
   controllers.controller('PageCtrl', function($scope) {
 
-    var openAboutDialog = function() {
-      console.log('openAboutDialog - called');
-    };
-
   	$scope.items = {
       left: [
         { name: 'File' },
@@ -34,20 +30,13 @@
         { name: 'View' }
       ],
       right: [
-        { name: 'About', action: openAboutDialog }
+        { name: 'About', event: 'ABOUT' }
       ]
   	};
 
-
-    // $scope.openAboutDialog = function() {
-    //   var d = $dialog.dialog({
-    //     backdrop: true,
-    //     keyboard: true,
-    //     backdropClick: true,
-    //     templateUrl: '/view/about'
-    //   });
-    //   d.open();
-    // };
+    $scope.$on('ABOUT', function(event) {
+      console.log(event);
+    });
 
   });
 

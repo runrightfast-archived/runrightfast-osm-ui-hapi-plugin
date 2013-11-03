@@ -25,10 +25,10 @@
     return {
       restrict: 'E',
       templateUrl: 'parts/cssmenu/cssmenu.html',
-      scope: {
-        items: '='
-      },
-      link: function(scope, elem, attr) {
+      link: function($scope, $element, $attrs) {
+        $scope.onEvent = function(event) {
+          $scope.$broadcast(event);
+        };
       	console.log("Recognized the cssmenu directive usage");
       }
     }
