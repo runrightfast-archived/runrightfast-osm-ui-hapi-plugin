@@ -29,7 +29,6 @@
         $scope.onEvent = function(event) {
           $scope.$broadcast(event);
         };
-      	console.log("Recognized the cssmenu directive usage");
       }
     }
   });

@@ -1,10 +1,10 @@
-body>header>.navbar {
+div.page>header>.navbar {
   background-color: #3b5998 !important;
   background-image: none !important;
   border: none;
   border-bottom-color: #3b5998 !important;
 }
-body>header>.navbar p {
+div.page>header>.navbar p {
   color: #f7f7f7 !important;
   cursor: pointer;
   font-size: 18px;
@@ -16,16 +16,16 @@ body>header>.navbar p {
   user-select: none;
 }
 
-body>footer {
+div.page>footer {
   background-color: #ecedef;
   color: #3b5998;
 }
 
-body>section>.page>.content {
+div.page>section>.page>.content {
 }
-body>section>.page>.content>.sidebar {
+div.page>section>.page>.content>.sidebar {
   background-color: yellow;
 }
-body>section>.page>.content>.workspace {
+div.page>section>.page>.content>.workspace {
   background-color: green;
 }

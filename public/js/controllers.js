@@ -19,9 +19,9 @@
 (function() {
   'use strict';
 
-  var controllers = angular.module('app.controllers', []);
+  var controllers = angular.module('app.controllers', [ 'ui.bootstrap' ]);
 
-  controllers.controller('PageCtrl', function($scope) {
+  controllers.controller('PageCtrl', function($scope, $modal) {
 
   	$scope.items = {
       left: [
@@ -30,14 +30,21 @@
         { name: 'View' }
       ],
       right: [
-        { name: 'About', event: 'ABOUT' }
+        { name: 'About', event: 'MENU:ABOUT' }
       ]
   	};
 
-    $scope.$on('ABOUT', function(event) {
-      console.log(event);
+    $scope.$on('MENU:ABOUT', function(event) {
+      var modalInstance = $modal.open({
+        templateUrl: 'views/about.jade',
+        controller: function ($scope, $modalInstance) {
+          $scope.ok = function () {
+            $modalInstance.close($scope.selected.item);
+          };
+        }
+      });      
     });
-
+  
   });
 
 }());

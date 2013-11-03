@@ -26,7 +26,9 @@
 	  'app.services',
 	  'part.cssmenu',
 	  'part.csstabs',
-	  'part.csstree'
+	  'part.csstree',
+	  'ui.bootstrap',
+	  'ui.utils'
   ]);
 
 }());

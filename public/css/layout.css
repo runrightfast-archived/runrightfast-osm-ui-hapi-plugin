@@ -1,9 +1,12 @@
-html,body {
+html, body, div.page {
 	height: 100%;
 	width: 100%;
 }
 
-body>header {
+div.page {
+}
+
+div.page>header {
 	position: absolute;
 	min-height: 32px !important;
 	height: 32px;
@@ -11,24 +14,24 @@ body>header {
 	top: 0;
 	width: 100%;
 }
-body>header>.navbar {
+div.page>header>.navbar {
   margin-bottom: 0px;
   height: 30px;
   min-height: 30px;
   border-radius: 0px;
 }
-body>header>.navbar>p {
+div.page>header>.navbar>p {
   margin: 3px 10px;
 }
 
-body>footer {
+div.page>footer {
 	min-height: 20px !important;
 	height: 20px;
 	text-align: center;
 	font-size: small; 
 }
 
-body>section {
+div.page>section {
 	position: absolute;
 	top: 30px;
 	bottom: 20px;
@@ -37,7 +40,7 @@ body>section {
 	overflow: hidden;
 	display: block;
 }
-body>section>.page{
+div.page>section>.page{
 	position: absolute;
 	top: 0px;
 	bottom: 0px;
@@ -45,7 +48,7 @@ body>section>.page{
 	right: 0px;
 	height: 100%;
 }
-body>section>.page>.content,
-body>section>.page>.content * {
+div.page>section>.page>.content,
+div.page>section>.page>.content * {
 	height: 100%;
 }

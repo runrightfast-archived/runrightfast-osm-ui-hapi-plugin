@@ -6,11 +6,12 @@ html(ng-app="app")
     link(rel='stylesheet', href='/css/layout.css')
     link(rel='stylesheet', href='/css/style.css')
     block head
-  body(ng-controller='PageCtrl')
-    header
-      block header
-    section
-      block body
-    footer.navbar.navbar-fixed-bottom
-      block footer
+  body
+    div.page(ng-controller='PageCtrl')
+      header
+        block header
+      section
+        block body
+      footer.navbar.navbar-fixed-bottom
+        block footer
     block scripts
