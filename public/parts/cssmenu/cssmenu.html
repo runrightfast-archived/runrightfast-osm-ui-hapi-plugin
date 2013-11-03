@@ -2,12 +2,14 @@
   <div class="collapse navbar-collapse">
   	<ul class="nav navbar-nav">
 			<li ng-repeat="item in items.left">
-	  		<a href="#">{{item.name}}</a>
+	  		<a ng-if="!!item.action" href="#" ng-click="item.action()">{{item.name}}</a>
+	  		<a ng-if="!!!item.action" href="#">{{item.name}}</a>
 	  	</li>  	
   	</ul>
   	<ul class="nav navbar-nav navbar-right">
 			<li ng-repeat="item in items.right">
-	  		<a href="#">{{item.name}}</a>
+	  		<a ng-if="!!item.action" href="#" ng-click="item.action()">{{item.name}}</a>
+	  		<a ng-if="!!!item.action" href="#">{{item.name}}</a>
 	  	</li>  	
   	</ul>
   </div>
