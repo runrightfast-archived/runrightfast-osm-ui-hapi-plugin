@@ -21,4 +21,19 @@
 
   var controllers = angular.module('app.controllers', []);
 
+  controllers.controller('PageCtrl', function($scope) {
+
+  	$scope.items = {
+      left: [
+        { name: 'File' },
+        { name: 'Edit' },
+        { name: 'View' }
+      ],
+      right: [
+        { name: 'About' }
+      ]
+  	};
+
+  });
+
 }());

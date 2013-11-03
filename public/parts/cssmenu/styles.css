@@ -1,0 +1,31 @@
+nav.cssmenu {
+  background-color: #ecedef;
+  border-radius: 0px;
+  min-height: 24px;
+  height: 24px;
+  margin-bottom: 0px;
+}
+nav.cssmenu>div.navbar-header {
+  height: 24px;
+}
+nav.cssmenu>div.navbar-header>a.navbar-brand {
+  font-size: 18px;
+  color: #f7f7f7 !important;
+  height: 24px;
+  padding: 3px 15px;
+}
+nav.cssmenu>div.navbar-collapse,
+nav.cssmenu>div.navbar-collapse * {
+  height: 24px !important
+}
+nav.cssmenu>div.navbar-collapse {
+  padding-left: 0px;
+}
+nav.cssmenu>div.navbar-collapse a {
+  font-size: 14px;
+  padding: 2px 10px;  
+}
+nav.cssmenu>div.navbar-collapse a:hover {
+  background-color: #666;
+  color: gold !important;
+}

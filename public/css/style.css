@@ -1,11 +1,13 @@
-body>header .navbar-inner {
+body>header>.navbar {
   background-color: #3b5998 !important;
   background-image: none !important;
+  border: none;
   border-bottom-color: #3b5998 !important;
 }
-body>header a {
+body>header>.navbar p {
   color: #f7f7f7 !important;
   cursor: pointer;
+  font-size: 18px;
   -webkit-touch-callout: none;
   -webkit-user-select: none;
   -khtml-user-select: none;
@@ -13,28 +15,17 @@ body>header a {
   -ms-user-select: none;
   user-select: none;
 }
-body>header a:hover {
-  color: gold !important;
+
+body>footer {
+  background-color: #ecedef;
+  color: #3b5998;
 }
 
-body>section>.page {
-  height: 100%;
+body>section>.page>.content {
 }
-
-body>section>.page .menu .menubar {
-  height: 100%;
-  background-color: red;
-}
-
-body>section>.page .content {
-  height: 100%;
-}
-body>section>.page .sidebar {
-  height: 100%;
+body>section>.page>.content>.sidebar {
   background-color: yellow;
 }
-
-body>section>.page .workspace {
-  height: 100%;
+body>section>.page>.content>.workspace {
   background-color: green;
 }

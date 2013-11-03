@@ -19,6 +19,19 @@
 (function() {
   'use strict';
 
-  var directives = angular.module('app.directives', []);
+  var module = angular.module('part.cssmenu', []);
+
+  module.directive('cssmenu', function() {
+    return {
+      restrict: 'E',
+      templateUrl: 'parts/cssmenu/cssmenu.html',
+      scope: {
+        items: '='
+      },
+      link: function(scope, elem, attr) {
+      	console.log("Recognized the cssmenu directive usage");
+      }
+    }
+  });
 
 }());

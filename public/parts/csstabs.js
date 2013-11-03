@@ -1,5 +1,5 @@
 /*
- * runrightfast-osm-ui-hapi-plugin: public/js/directives.js
+ * runrightfast-osm-ui-hapi-plugin: public/parts/csstabs.js
  * AngularJS directives for the RunRightFast OSM UI
  *
  * Copyright [2013] [runrightfast.co]
@@ -19,6 +19,18 @@
 (function() {
   'use strict';
 
-  var directives = angular.module('app.directives', []);
+  var module = angular.module('part.csstabs', []);
+
+  module.directive('csstabs', function() {
+    return {
+      restrict: 'E',
+      templateUrl: 'parts/csstabs/csstabs.html',
+      scope: {
+      },
+      link: function(scope, elem, attr) {
+      	console.log("Recognized the csstabs directive usage");
+      }
+    }
+  });
 
 }());

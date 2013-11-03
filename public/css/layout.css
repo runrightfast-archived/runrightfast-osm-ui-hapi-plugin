@@ -5,15 +5,20 @@ html,body {
 
 body>header {
 	position: absolute;
-	min-height: 22px !important;
-	height: 22px;
+	min-height: 32px !important;
+	height: 32px;
 	left: 0;
 	top: 0;
 	width: 100%;
 }
-body>header>.navbar-inner>.container {
-	width: auto;
-	margin-left: 10px;
+body>header>.navbar {
+  margin-bottom: 0px;
+  height: 30px;
+  min-height: 30px;
+  border-radius: 0px;
+}
+body>header>.navbar>p {
+  margin: 3px 10px;
 }
 
 body>footer {
@@ -25,7 +30,7 @@ body>footer {
 
 body>section {
 	position: absolute;
-	top: 22px;
+	top: 30px;
 	bottom: 20px;
 	left: 0px;
 	right: 0px;
@@ -38,23 +43,9 @@ body>section>.page{
 	bottom: 0px;
 	left: 0px;
 	right: 0px;
-}
-body>section>.page>.sidebar {
-	position: absolute;
-	left: 0px;
-	width: 20%;
 	height: 100%;
 }
-body>section>.page>.sidebar>.content {
-	position: absolute;
-    top: 2px;
-    bottom: 2px;
-    left: 4px;
-    right: 4px;
-    -webkit-border-radius: 4px 4px 4px 4px;
-    -moz-border-radius: 4px 4px 4px 4px;
-    border-radius: 4px 4px 4px 4px;        
-    border: 1px solid #999999;
-    border-left: 1px solid #CCCCCC;
-    border-top: 1px solid #DFE3EE;
+body>section>.page>.content,
+body>section>.page>.content * {
+	height: 100%;
 }

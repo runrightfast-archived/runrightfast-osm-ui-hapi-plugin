@@ -2,32 +2,33 @@ extends layout
 
 block head
   title #{t('title')} <#{env}>
+  link(rel='stylesheet', href='/parts/cssmenu/styles.css')
+  link(rel='stylesheet', href='/parts/csstabs/styles.css')
+  link(rel='stylesheet', href='/parts/csstree/styles.css')
 
 block header
-  div.navbar-inner
-    div.container
-      a.brand(ref="#") #{t('appname')}
-      div.nav-collapse.collapse
-        ul.nav.pull-right
-          li.about-menu
-            a(href="#",ng-click="openAboutDialog()") #{t('about')}
+  div.navbar
+    p.navbar-text #{t("appname")}
 
 block footer
-  span.muted.credit #{t('appname')} - v#{version}
+  span.muted.credit #{t('title')} - v#{version}
   
 block body
   div.page.container-liquid
-    div.menu.row
-      div.menubar.col-sm-12
-        p TBD - menu
+    div.row
+      div.col-sm-12
+        cssmenu(items='items')
     div.content.row
       div.sidebar.col-sm-3
-        p TBD - sidebar
+        csstree
       div.workspace.col-sm-9
-        p TBD - workspace
+        csstabs
   
 block scripts
   script(type='text/javascript', src='/vendor/angularjs/1.2.0-rc3/js/angular.js')
+  script(type='text/javascript', src='/parts/cssmenu.js')
+  script(type='text/javascript', src='/parts/csstabs.js')
+  script(type='text/javascript', src='/parts/csstree.js')
   script(type='text/javascript', src='/js/app.js')
   script(type='text/javascript', src='/js/controllers.js')
   script(type='text/javascript', src='/js/directives.js')

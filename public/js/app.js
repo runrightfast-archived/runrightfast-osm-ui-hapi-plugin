@@ -24,8 +24,9 @@
 	  'app.directives',
 	  'app.filters',
 	  'app.services',
-	  'ui.bootstrap', 
-	  'ui.utils'
+	  'part.cssmenu',
+	  'part.csstabs',
+	  'part.csstree'
   ]);
 
 }());
