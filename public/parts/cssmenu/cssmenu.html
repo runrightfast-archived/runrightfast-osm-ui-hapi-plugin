@@ -3,7 +3,7 @@
   	<ul class="nav navbar-nav">
 			<li ng-repeat="item in items.left" class="dropdown">
 				<a ng-if="!item.items.length" href="#" ng-click="onEvent('{{item.event}}')">{{item.name}}</a>
-  			<a ng-if="!!item.items.length" href="#" class="dropdown-toggle" data-toggle="dropdown">{{item.name}} <b class="caret"></b></a>
+  			<a ng-if="!!item.items.length" href="#" class="dropdown-toggle" data-toggle="dropdown">{{item.name}}</a>
 	  		<ul ng-if="!!item.items.length" class="dropdown-menu">
 	  		  <li ng-repeat="leaf in item.items" ng-class="{divider: leaf.type === 'SEPARATOR'}">
      	  		<a ng-if="!(leaf.type === 'SEPARATOR')" href="#" ng-click="onEvent('{{leaf.event}}')">{{leaf.name}}</a>
