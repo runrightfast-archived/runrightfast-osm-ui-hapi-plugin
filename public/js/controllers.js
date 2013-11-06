@@ -25,9 +25,19 @@
 
   	$scope.items = {
       left: [
-        { name: 'File' },
-        { name: 'Edit' },
-        { name: 'View' }
+        { name: 'File', items: [
+          { name: 'New', event: 'MENU:FILE:NEW' },
+          { name: 'Save', event: 'MENU:FILE:SAVE' },
+          { name: 'Save All', event: 'MENU:FILE:SAVE_ALL' },
+          { type: 'SEPARATOR' },
+          { name: 'Quit', event: 'MENU:FILE:QUIT' }
+        ]},
+        { name: 'Edit', items: [
+          { name: 'Cut', event: 'MENU:EDIT:CUT' },
+          { name: 'Copy', event: 'MENU:EDIT:COPY' },
+          { name: 'Paste', event: 'MENU:EDIT:PASTE' }
+        ]},
+        { name: 'View', event: 'MENU:VIEW' }
       ],
       right: [
         { name: 'About', event: 'MENU:ABOUT' }
@@ -43,6 +53,14 @@
           };
         }
       });      
+    });
+
+    $scope.$on('MENU:FILE:NEW', function(event) {
+      console.log(event);
+    });
+
+    $scope.$on('MENU:VIEW', function(event) {
+      console.log(event);
     });
   
   });
