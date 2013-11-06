@@ -1,6 +1,6 @@
-/**
- * runrightfast-osm-ui-hapi-plugin: app.js
- * AngularJS main script for the RunRightFast OSM UI
+/*
+ * runrightfast-osm-ui-hapi-plugin: events.js
+ * AngularJS event catalog for the RunRightFast OSM UI
  *
  * Copyright [2013] [runrightfast.co]
  * 
@@ -19,17 +19,25 @@
 (function() {
   'use strict';
 
-  var appModule = angular.module('app', [ 
-	  'app.controllers',
-	  'app.directives',
-	  'app.events',
-	  'app.filters',
-	  'app.services',
-	  'part.cssmenu',
-	  'part.csstabs',
-	  'part.csstree',
-	  'ui.bootstrap',
-	  'ui.utils'
-  ]);
+  var events = angular.module('app.events', []);
+
+  events.factory('Events', function() {
+  	return {
+
+  		MENU_FILE_NEW: 'MENU:FILE:NEW',
+  		MENU_FILE_SAVE: 'MENU:FILE:SAVE',
+  		MENU_FILE_SAVE_ALL: 'MENU:FILE:SAVE_ALL',
+  		MENU_FILE_QUIT: 'MENU:FILE:SAVE_QUIT',
+
+  		MENU_EDIT_CUT: 'MENU:EDIT:CUT',
+  		MENU_EDIT_COPY: 'MENU:EDIT:COPY',
+  		MENU_EDIT_PASTE: 'MENU:EDIT:PASTE',
+
+  		MENU_VIEW: 'MENU:VIEW',
+
+  		MENU_ABOUT: 'MENU:ABOUT'
+
+  	};
+  });
 
 }());

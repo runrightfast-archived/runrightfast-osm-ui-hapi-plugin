@@ -21,30 +21,30 @@
 
   var controllers = angular.module('app.controllers', [ 'ui.bootstrap' ]);
 
-  controllers.controller('PageCtrl', function($scope, $modal) {
+  controllers.controller('PageCtrl', function($scope, $modal, Events) {
 
   	$scope.items = {
       left: [
         { name: 'File', items: [
-          { name: 'New', event: 'MENU:FILE:NEW' },
-          { name: 'Save', event: 'MENU:FILE:SAVE' },
-          { name: 'Save All', event: 'MENU:FILE:SAVE_ALL' },
+          { name: 'New', event: Events.MENU_FILE_NEW },
+          { name: 'Save', event: Events.MENU_FILE_SAVE },
+          { name: 'Save All', event: Events.MENU_FILE_SAVE_ALL },
           { type: 'SEPARATOR' },
-          { name: 'Quit', event: 'MENU:FILE:QUIT' }
+          { name: 'Quit', event: Events.MENU_FILE_QUIT }
         ]},
         { name: 'Edit', items: [
-          { name: 'Cut', event: 'MENU:EDIT:CUT' },
-          { name: 'Copy', event: 'MENU:EDIT:COPY' },
-          { name: 'Paste', event: 'MENU:EDIT:PASTE' }
+          { name: 'Cut', event: Events.MENU_EDIT_CUT },
+          { name: 'Copy', event: Events.MENU_EDIT_COPY },
+          { name: 'Paste', event: Events.MENU_EDIT_PASTE }
         ]},
-        { name: 'View', event: 'MENU:VIEW' }
+        { name: 'View', event: Events.MENU_VIEW }
       ],
       right: [
-        { name: 'About', event: 'MENU:ABOUT' }
+        { name: 'About', event: Events.MENU_ABOUT }
       ]
   	};
 
-    $scope.$on('MENU:ABOUT', function(event) {
+    $scope.$on(Events.MENU_ABOUT, function(event) {
       var modalInstance = $modal.open({
         templateUrl: 'views/about.jade',
         controller: function ($scope, $modalInstance) {
@@ -55,11 +55,11 @@
       });      
     });
 
-    $scope.$on('MENU:FILE:NEW', function(event) {
+    $scope.$on(Events.MENU_FILE_NEW, function(event) {
       console.log(event);
     });
 
-    $scope.$on('MENU:VIEW', function(event) {
+    $scope.$on(Events.MENU_VIEW, function(event) {
       console.log(event);
     });
   
