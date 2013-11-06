@@ -4,6 +4,11 @@ nav.cssmenu {
   min-height: 26px;
   height: 26px;
   margin-bottom: 0px;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: -moz-none;
+  -ms-user-select: none;
+  user-select: none;
 }
 nav.cssmenu>div.navbar-header {
   height: 24px;
