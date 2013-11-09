@@ -28,8 +28,7 @@
 	  'part.cssmenu',
 	  'part.csstabs',
 	  'part.csstree',
-	  'ui.bootstrap',
-	  'ui.utils'
+	  'ui.bootstrap'
   ]);
 
 }());
