@@ -1,5 +1,5 @@
 /*
- * runrightfast-osm-ui-hapi-plugin: filters.js
+ * runrightfast-osm-ui-hapi-plugin: /public/js/filters.js
  * AngularJS filters for the RunRightFast OSM UI
  *
  * Copyright [2013] [runrightfast.co]

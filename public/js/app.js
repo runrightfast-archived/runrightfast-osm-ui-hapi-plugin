@@ -1,5 +1,5 @@
 /**
- * runrightfast-osm-ui-hapi-plugin: app.js
+ * runrightfast-osm-ui-hapi-plugin: /public/js/app.js
  * AngularJS main script for the RunRightFast OSM UI
  *
  * Copyright [2013] [runrightfast.co]

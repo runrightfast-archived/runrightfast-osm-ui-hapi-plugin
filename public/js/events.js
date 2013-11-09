@@ -1,5 +1,5 @@
 /*
- * runrightfast-osm-ui-hapi-plugin: events.js
+ * runrightfast-osm-ui-hapi-plugin: /public/js/events.js
  * AngularJS event catalog for the RunRightFast OSM UI
  *
  * Copyright [2013] [runrightfast.co]

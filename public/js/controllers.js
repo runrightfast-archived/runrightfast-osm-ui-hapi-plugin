@@ -1,5 +1,5 @@
 /*
- * runrightfast-osm-ui-hapi-plugin: controllers.js
+ * runrightfast-osm-ui-hapi-plugin: /public/js/controllers.js
  * AngularJS controllers for the RunRightFast OSM UI
  *
  * Copyright [2013] [runrightfast.co]
