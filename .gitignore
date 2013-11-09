@@ -7,6 +7,8 @@ lib-cov
 *.pid
 *.gz
 
+public/vendor
+
 pids
 logs
 results
