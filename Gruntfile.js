@@ -23,6 +23,13 @@ module.exports = function(grunt) {
 	// Project configuration.
 	grunt.initConfig({
 		pkg : grunt.file.readJSON('package.json'),
+		bower: {
+    	install: {
+    		options: {
+    			targetDir: 'public/vendor'
+    		}
+    	}
+  	},
 		jslint : {
 			server : {
 				src : [ 'lib/*.js', 'test/*.js', 'config.js', 'index.js' ],
@@ -64,9 +71,10 @@ module.exports = function(grunt) {
 		clean : [ 'out' ]
 	});
 
+	grunt.loadNpmTasks('grunt-bower-task');
+	grunt.loadNpmTasks('grunt-contrib-clean');
 	grunt.loadNpmTasks('grunt-jslint');
 	grunt.loadNpmTasks('grunt-mocha-cov');
-	grunt.loadNpmTasks('grunt-contrib-clean');
 
 	grunt.registerTask('test', [ 'mochacov:test' ]);
 
