@@ -1,5 +1,5 @@
 /*
- * runrightfast-osm-ui-hapi-plugin: public/js/directives.js
+ * runrightfast-osm-ui-hapi-plugin: /public/parts/cssmenu.js
  * AngularJS directives for the RunRightFast OSM UI
  *
  * Copyright [2013] [runrightfast.co]
@@ -16,10 +16,10 @@
  * License for the specific language governing permissions and limitations under
  * the License.
  */
-(function() {
+ define(['angular'], function (ng) {
   'use strict';
 
-  var module = angular.module('part.cssmenu', []);
+  var module = ng.module('part.cssmenu', []);
 
   module.directive('cssmenu', function() {
     return {
@@ -33,4 +33,4 @@
     }
   });
 
-}());
+});

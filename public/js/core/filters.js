@@ -1,5 +1,5 @@
 /*
- * runrightfast-osm-ui-hapi-plugin: /public/js/filters.js
+ * runrightfast-osm-ui-hapi-plugin: /public/js/core/filters.js
  * AngularJS filters for the RunRightFast OSM UI
  *
  * Copyright [2013] [runrightfast.co]
@@ -16,9 +16,9 @@
  * License for the specific language governing permissions and limitations under
  * the License.
  */
-(function() {
+define(['angular'], function (ng) {
   'use strict';
 
-  var filters = angular.module('app.filters', []);
+  var filters = ng.module('app.filters', []);
 
-}());
+});

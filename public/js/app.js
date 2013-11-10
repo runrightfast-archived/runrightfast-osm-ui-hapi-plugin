@@ -16,10 +16,20 @@
  * License for the specific language governing permissions and limitations under
  * the License.
  */
-(function() {
+define([
+  'angular',
+  './controllers/controllers',
+  './core/directives',
+  './core/events',
+  './core/filters',
+  './services/services',
+  '../parts/cssmenu',
+  '../parts/csstabs',
+  '../parts/csstree'
+], function (ng) {
   'use strict';
 
-  var appModule = angular.module('app', [ 
+  ng.module('app', [ 
 	  'app.controllers',
 	  'app.directives',
 	  'app.events',
@@ -31,4 +41,4 @@
 	  'ui.bootstrap'
   ]);
 
-}());
+});

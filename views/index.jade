@@ -25,15 +25,4 @@ block body
         csstabs
   
 block scripts
-  script(type='text/javascript', src='/vendor/angular/angular.js')
-  script(type='text/javascript', src='/vendor/angular-bootstrap/ui-bootstrap.js')
-  script(type='text/javascript', src='/vendor/angular-bootstrap/ui-bootstrap-tpls.js')
-  script(type='text/javascript', src='/parts/cssmenu.js')
-  script(type='text/javascript', src='/parts/csstabs.js')
-  script(type='text/javascript', src='/parts/csstree.js')
-  script(type='text/javascript', src='/js/app.js')
-  script(type='text/javascript', src='/js/core/directives.js')
-  script(type='text/javascript', src='/js/core/events.js')
-  script(type='text/javascript', src='/js/core/filters.js')
-  script(type='text/javascript', src='/js/controllers/controllers.js')
-  script(type='text/javascript', src='/js/services/services.js')
+  script(src="/vendor/requirejs/require.js", data-main="js/main.js")

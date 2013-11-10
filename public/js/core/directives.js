@@ -1,5 +1,5 @@
 /*
- * runrightfast-osm-ui-hapi-plugin: public/js/directives.js
+ * runrightfast-osm-ui-hapi-plugin: /public/js/core/directives.js
  * AngularJS directives for the RunRightFast OSM UI
  *
  * Copyright [2013] [runrightfast.co]
@@ -16,9 +16,9 @@
  * License for the specific language governing permissions and limitations under
  * the License.
  */
-(function() {
+define(['angular'], function (ng) {
   'use strict';
 
-  var directives = angular.module('app.directives', []);
+  var directives = ng.module('app.directives', []);
 
-}());
+});

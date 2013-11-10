@@ -1,5 +1,5 @@
 /*
- * runrightfast-osm-ui-hapi-plugin: /public/js/services.js
+ * runrightfast-osm-ui-hapi-plugin: /public/js/services/services.js
  * AngularJS services for the RunRightFast OSM UI
  *
  * Copyright [2013] [runrightfast.co]
@@ -16,9 +16,9 @@
  * License for the specific language governing permissions and limitations under
  * the License.
  */
-(function() {
+define(['angular'], function (ng) {
   'use strict';
 
-  var services = angular.module('app.services', []);
+  var services = ng.module('app.services', []);
 
-}());
+});

@@ -1,5 +1,5 @@
 /*
- * runrightfast-osm-ui-hapi-plugin: /public/js/controllers.js
+ * runrightfast-osm-ui-hapi-plugin: /public/js/controllers/controllers.js
  * AngularJS controllers for the RunRightFast OSM UI
  *
  * Copyright [2013] [runrightfast.co]
@@ -16,10 +16,10 @@
  * License for the specific language governing permissions and limitations under
  * the License.
  */
-(function() {
+define([ 'angular', 'ui-bootstrap' ], function (ng) {
   'use strict';
 
-  var controllers = angular.module('app.controllers', [ 'ui.bootstrap' ]);
+  var controllers = ng.module('app.controllers', [ 'ui.bootstrap' ]);
 
   controllers.controller('PageCtrl', function($scope, $modal, Events) {
 
@@ -65,4 +65,4 @@
   
   });
 
-}());
+});
