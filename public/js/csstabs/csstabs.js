@@ -1,5 +1,5 @@
 /*
- * runrightfast-osm-ui-hapi-plugin: /public/parts/csstree.js
+ * runrightfast-osm-ui-hapi-plugin: /public/parts/csstabs.js
  * AngularJS directives for the RunRightFast OSM UI
  *
  * Copyright [2013] [runrightfast.co]
@@ -16,19 +16,19 @@
  * License for the specific language governing permissions and limitations under
  * the License.
  */
-define(['angular'], function (ng) {
-  'use strict';
+define(['angular', 'text!csstabs/csstabs.html'], function (ng, template) {
+  'use strict'; 
 
-  var module = ng.module('part.csstree', []);
+  var module = ng.module('part.csstabs', []);
 
-  module.directive('csstree', function() {
+  module.directive('csstabs', function() {
     return {
       restrict: 'E',
-      templateUrl: 'parts/csstree/csstree.html',
+      template: template,
       scope: {
       },
       link: function(scope, elem, attr) {
-      	console.log("Recognized the csstree directive usage");
+      	console.log("Recognized the csstabs directive usage");
       }
     }
   });

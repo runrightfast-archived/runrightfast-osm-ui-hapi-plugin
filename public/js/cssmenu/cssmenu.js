@@ -1,5 +1,5 @@
 /*
- * runrightfast-osm-ui-hapi-plugin: /public/parts/csstabs.js
+ * runrightfast-osm-ui-hapi-plugin: /public/parts/cssmenu.js
  * AngularJS directives for the RunRightFast OSM UI
  *
  * Copyright [2013] [runrightfast.co]
@@ -16,19 +16,19 @@
  * License for the specific language governing permissions and limitations under
  * the License.
  */
-define(['angular'], function (ng) {
-  'use strict'; 
+ define(['angular', 'text!cssmenu/cssmenu.html'], function (ng, template) {
+  'use strict';
 
-  var module = ng.module('part.csstabs', []);
+  var module = ng.module('part.cssmenu', []);
 
-  module.directive('csstabs', function() {
+  module.directive('cssmenu', function() {
     return {
       restrict: 'E',
-      templateUrl: 'parts/csstabs/csstabs.html',
-      scope: {
-      },
-      link: function(scope, elem, attr) {
-      	console.log("Recognized the csstabs directive usage");
+      template: template,
+      link: function($scope, $element, $attrs) {
+        $scope.onEvent = function(event) {
+          $scope.$broadcast(event);
+        };
       }
     }
   });

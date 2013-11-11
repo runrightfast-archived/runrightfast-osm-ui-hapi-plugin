@@ -23,9 +23,9 @@ define([
   './core/events',
   './core/filters',
   './services/services',
-  '../parts/cssmenu/cssmenu',
-  '../parts/csstabs/csstabs',
-  '../parts/csstree/csstree'
+  './cssmenu/cssmenu',
+  './csstabs/csstabs',
+  './csstree/csstree'
 ], function (ng) {
   'use strict';
 

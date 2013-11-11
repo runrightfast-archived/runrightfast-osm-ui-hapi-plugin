@@ -20,8 +20,9 @@ require.config({
   
   // alias libraries paths
   paths: {
-    'domReady': '../vendor/requirejs-domready/domReady',
     'angular': '../vendor/angular/angular',
+    'domReady': '../vendor/requirejs-domready/domReady',
+    'text': '../vendor/requirejs-text/text',
     'ui-bootstrap': '../vendor/angular-bootstrap/ui-bootstrap'
   },
   
